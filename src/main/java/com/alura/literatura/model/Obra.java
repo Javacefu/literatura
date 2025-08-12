@@ -1,7 +1,6 @@
 package com.alura.literatura.model;
 
 import jakarta.persistence.*;
-import jdk.jfr.Description;
 
 @Entity
 @Table(name = "obras")
