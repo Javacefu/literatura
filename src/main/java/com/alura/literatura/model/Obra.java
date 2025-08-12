@@ -1,4 +1,4 @@
-package com.alura.literatura.model;
+/*package com.alura.literatura.model;
 
 import jakarta.persistence.*;
 
@@ -58,4 +58,4 @@ public class Obra {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-}
+}*/
