@@ -1,21 +1,36 @@
 package com.alura.literatura;
 
-import com.alura.literatura.principal.Principal;
+import com.alura.literatura.client.ClienteLiteratura;
+import com.alura.literatura.repository.AutorRepository;
+import com.alura.literatura.repository.LibroRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import java.io.IOException;
+import javax.sql.DataSource;
 
 @SpringBootApplication
-public class LiteraturaApplication {
+//@EnableJpaRepositories(basePackages = "com.alura.literatura.repository")
+public class LiteraturaApplication{
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+//	@Autowired
+//	private LibroRepository libroRepository;
+//	@Autowired
+//	private AutorRepository autorRepositorio;
 
+	public static void main(String[] args) {
 		SpringApplication.run(LiteraturaApplication.class, args);
-
-		// Inicial el menu en consola
-		Principal principal = new Principal();
-		principal.muestraElMenu();
 	}
-	
+//
+//	@Override
+//	public void run(String... args) throws Exception {
+//
+//		ClienteLiteratura client = new ClienteLiteratura(libroRepository, autorRepositorio);
+//		client.menu();
+//	}
+
 }

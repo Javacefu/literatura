@@ -7,12 +7,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ConsumoAPI {
-    public String obtenerDatos(String url) throws IOException, InterruptedException {
+    public String obtenerDatos(String url){
+        System.out.println("\nBuscando ...\n\n");
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .build();
-
         HttpResponse<String> response = null;
         try {
             response = client

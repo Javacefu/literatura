@@ -1,17 +1,15 @@
 package com.alura.literatura.repository;
 
-import com.alura.literatura.model.Libro;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
-import java.util.List;
-import java.util.Optional;
+import com.alura.literatura.entity.LibroEntity;
 
-public interface LibroRepository extends JpaRepository<Libro, Long> {
-    Optional<Libro> findByTituloIgnoreCase(String titulo);
+public interface LibroRepository extends JpaRepository<LibroEntity, Long> {
 
-    @Query("SELECT l FROM libro l WHERE l.idioma = :idioma")
-    List<Libro> findByIdioma(@Param("idioma") String idioma);
+    @Query("SELECT l FROM LibroEntity l WHERE l.lenguaje = :idioma")
+    List<LibroEntity> findForLanguaje(String idioma);
 
 }
